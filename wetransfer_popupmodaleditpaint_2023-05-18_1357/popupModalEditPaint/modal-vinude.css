@@ -262,6 +262,10 @@
   border-radius: 0 4px 4px 0;
   flex-direction: column;
   justify-content: center;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 .modal-vinude-frame11 {
   gap: -86px;
@@ -333,6 +337,10 @@
   border-radius: 0 4px 4px 0;
   flex-direction: column;
   justify-content: center;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 .modal-vinude-frame111 {
   gap: -86px;
