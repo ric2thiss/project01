@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>exported project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <link href="./modal-vinude.css" rel="stylesheet" />
+
+      <div class="modal-vinude-container">
+        <div class="modal-vinude-modal-vinude">
+          <div class="modal-vinude-buttons">
+            <div class="modal-vinude-delete-btb" onclick="deleteData()">
+              <span class="modal-vinude-text"><span>Delete</span></span>
+            </div>
+            <div class="modal-vinude-save-btn" onclick="saveData()">
+              <span class="modal-vinude-text02"><span>Save Gallery</span></span>
+            </div>
+          </div>
+          <div class="modal-vinude-descriptions">
+            <span class="modal-vinude-text04"><span>Description</span></span>
+            <div class="modal-vinude-frame14">
+              <div class="modal-vinude-length">
+                <div class="modal-vinude-frame13" id="modal-vinude-frame13">
+                  <span class="modal-vinude-text06">
+                    <textarea placeholder="Describe your painting" class="description-input" id="description-input" cols="44" rows="3"></textarea>
+                  </span>
+                  <div class="modal-vinude-resizer" id="resizer">
+                    <img
+                      src="public/playground_assets/line5415-uug7.svg"
+                      alt="Line5415"
+                      class="modal-vinude-line"
+                    />
+                    <img
+                      src="public/playground_assets/line5415-kmg6.svg"
+                      alt="Line5415"
+                      class="modal-vinude-line1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-vinude-dimensions">
+            <div class="modal-vinude-frame5">
+              <span class="modal-vinude-text08"><span>Dimensions</span></span>
+            </div>
+            <div class="modal-vinude-frame141">
+              <div class="modal-vinude-length1">
+                <div class="modal-vinude-frame131">
+                  <span class="modal-vinude-text10"><input type="number" placeholder="Length" id="input-length"></span>
+                </div>
+                <div class="modal-vinude-frame12" id="myElementLength">
+                  <div class="modal-vinude-frame11">
+                    <span class="modal-vinude-text12"><span>cm</span></span>
+                    <img
+                      src="public/playground_assets/svg5415-mn0m.svg"
+                      alt="svg5415"
+                      class="modal-vinude-svg"
+                      
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="modal-vinude-length2">
+                <div class="modal-vinude-frame132">
+                  <span class="modal-vinude-text14"><input type="number" placeholder="Width" id="input-width"></span>
+                </div>
+                <div class="modal-vinude-frame121" id="myElement">
+                  <div class="modal-vinude-frame111">
+                    <span class="modal-vinude-text16"><span>cm</span></span>
+                    <img
+                      src="public/playground_assets/svg5415-70h9.svg"
+                      alt="svg5415"
+                      class="modal-vinude-svg1"
+                      
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            src="public/playground_assets/rectangle45415-8vph-200h.png"
+            alt="Rectangle45415"
+            class="modal-vinude-rectangle4"
+          />
+          <div class="modal-vinude-name-of-painting">
+            <span class="modal-vinude-text18">
+              <span>Name of the Painting</span>
+            </span>
+            <div class="modal-vinude-frame142">
+              <div class="modal-vinude-length3">
+                <div class="modal-vinude-frame133" id="modal-vinude-frame133">
+                  <span class="modal-vinude-text20">
+                    <input type="text" placeholder="Input the name of the painting here" id="modal-vinude-input-text">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            src="public/playground_assets/closefill0wght400grad0opsz4825414-fgem.svg"
+            alt="closeFILL0wght400GRAD0opsz4825414"
+            class="modal-vinude-close-fill0wght400grad0opsz482"
+          />
+          <span class="modal-vinude-text22">
+            <span>Painting Information</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <script src="./modal.js"></script>
+  </body>
+</html>
