@@ -52,12 +52,12 @@ element.addEventListener("mouseover", function () {
 })
 
 elementLength.addEventListener('mouseover',function(){
-  elementLength.style.cursor = "ew-resize"; 
+  elementLength.style.cursor = "ns-resize"; 
   elementLength.addEventListener("mousedown", function (e) {
     isResizingLength = true;
     startPosY = e.clientY;
     startHeight = parseInt(document.defaultView.getComputedStyle(elementLength).height, 10);
-    elementLength.style.cursor = "ew-resize"; 
+    elementLength.style.cursor = "ns-resize"; 
   });
 })
 
