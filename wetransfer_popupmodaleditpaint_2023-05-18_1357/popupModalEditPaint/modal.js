@@ -12,16 +12,11 @@ input_text.addEventListener("focusout", function(){
     input_text_container.style.setProperty('border-color', 'rgba(154, 170, 184, 1)');
 });
 
+
+
 // Description
 input_description.style.resize = "none";
 input_description.style.overflow = "hidden";
-// Wont work because it as conflict with css
-// input_description.addEventListener('keyup', e=> {
-//   input_description.style.height = `auto`
-//   let scHeight = e.target.scrollHeight;
-//   input_description.style.height = `${scHeight}px`
-// } )
-
 
 input_description.addEventListener("focusin", function(){
     input_text_description.style.setProperty('border-color', 'rgb(15, 129, 199)');
@@ -47,30 +42,42 @@ element.addEventListener("mouseover", function () {
     isResizing = true;
     startPosX = e.clientX;
     startWidth = parseInt(document.defaultView.getComputedStyle(element).width, 10);
+    if (inputWidth.value !== "") {
+      startWidth = parseInt(inputWidth.value, 10);
+    } else {
+      startWidth = 0;
+    }
     element.style.cursor = "ns-resize"; 
   });
+  
 })
 
 elementLength.addEventListener('mouseover',function(){
-  elementLength.style.cursor = "ns-resize"; 
+  elementLength.style.cursor = "ew-resize"; 
   elementLength.addEventListener("mousedown", function (e) {
     isResizingLength = true;
     startPosY = e.clientY;
     startHeight = parseInt(document.defaultView.getComputedStyle(elementLength).height, 10);
-    elementLength.style.cursor = "ns-resize"; 
-  });
+    if (inputLength.value !== "") {
+      startHeight = parseInt(inputLength.value, 10);
+    } else {
+      startHeight = 0;
+    }
+    elementLength.style.cursor = "ew-resize"; 
+  });  
+  
 })
 
 document.addEventListener("mousemove", function (e) {
   if (isResizing) {
-    let width = startWidth + (e.clientX - startPosX);
+    let width = startWidth  + (e.clientX - startPosX);
     if (width >= 0) {
       inputWidth.value = width;
     }
   }
 
   if (isResizingLength) {
-    var height = startHeight + (e.clientY - startPosY);
+    var height = startHeight + ( startPosY - e.clientY );
     if (height >= 0) {
       inputLength.value = height;
     }
@@ -142,7 +149,7 @@ function saveData() {
     let description = input_description.value;
     
 
-    alert(`Name of Painting: ${nameofPaint}\n Description: ${description}\n Length: ${length}cm\n Width : ${width}cm`)
+    alert(`Name of Painting: ${nameofPaint}\n Description: ${description}\n Height: ${length}cm\n Width : ${width}cm`)
   }
 
   function deleteData() {
